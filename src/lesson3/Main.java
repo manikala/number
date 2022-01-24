@@ -6,27 +6,20 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-	// write your code here
-        for (int i = 10; i<=30; i+=10){
-//            System.out.println(i);
-
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Угадайте число.");
-//            int range = i;
-            int number = (int) (Math.random() * i);
-            playnum(i, number);
-
-        }
+        System.out.println("Задача угадать число");
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 10; i<=30; i+=10) playnum(i);
+        System.out.println("Вы выйграли!!!!!!!!!!");
         scanner.close();
     }
 
-
-    private static void playnum (int range, int number){
+    private static void playnum (int range){
+        int number = (int) (Math.random() * range);
         while (true) {
             System.out.println("Угадайте число от 0 до " + range);
             int input_num = scanner.nextInt();
             if (input_num == number) {
-                System.out.println("Вы победили !!!");
+                System.out.println("Вы угадали ");
                 break;
 
             } else if (input_num > number) {
