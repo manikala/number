@@ -7,13 +7,19 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Угадайте число.");
-        int range = 30;
-        int number = (int) (Math.random() * range);
-        playnum(range, number);
+        for (int i = 10; i<=30; i+=10){
+//            System.out.println(i);
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Угадайте число.");
+//            int range = i;
+            int number = (int) (Math.random() * i);
+            playnum(i, number);
+
+        }
         scanner.close();
     }
+
 
     private static void playnum (int range, int number){
         while (true) {
